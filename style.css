@@ -1,4 +1,3 @@
-/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -56,15 +55,9 @@ body {
   transition: 0.3s;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
 }
 
 /* Hero Section */
@@ -83,14 +76,12 @@ body {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 .hero p {
+  font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto 2rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
 }
 
 .btn {
@@ -109,9 +100,10 @@ body {
   background: #0077b6;
 }
 
-/* Section Base */
+/* General Section Styling */
 section {
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
+  margin-top: 60px;
 }
 
 .container {
@@ -120,33 +112,36 @@ section {
   text-align: center;
 }
 
-/* About Section */
-.about p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-top: 1rem;
+/* Page Header */
+.page-header {
+  background: #0a1931;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
 }
 
-/* Services Section */
+.page-header h1 {
+  font-size: 2.5rem;
+}
+
+/* Services */
 .services {
   background: #f1f1f1;
 }
 
 .service-grid {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  justify-content: center;
   gap: 2rem;
 }
 
 .service-card {
   background: white;
   padding: 2rem;
-  flex: 1;
-  min-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
   transition: transform 0.3s;
 }
 
@@ -167,10 +162,6 @@ section {
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
-}
-
-.contact button {
-  cursor: pointer;
 }
 
 /* Footer */
@@ -201,6 +192,9 @@ footer {
 
   .menu-toggle {
     display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
   }
 
   .service-grid {
