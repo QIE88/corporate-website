@@ -1,7 +1,49 @@
-<h1>Contact Us</h1>
-<form>
-  <input type="text" placeholder="Your Name" required>
-  <input type="email" placeholder="Your Email" required>
-  <textarea placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Website | Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+  </nav>
+
+  <section class="page-header">
+    <h1>Contact Us</h1>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <p>We’d love to hear from you. Fill out the form below and we’ll get back to you soon.</p>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <p id="formMessage"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Corporate Website. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
