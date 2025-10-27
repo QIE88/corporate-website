@@ -1,9 +1,19 @@
 // Mobile Navbar Toggle
 const menu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
-
 menu.addEventListener('click', () => {
   navLinks.classList.toggle('active');
+});
+
+// Dropdown Toggle for Mobile
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      this.classList.toggle('active');
+    }
+  });
 });
 
 // Contact Form Validation
