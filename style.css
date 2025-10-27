@@ -10,7 +10,7 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -60,7 +60,51 @@ body {
   width: 100%;
 }
 
-/* Hero Section */
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #0a1931;
+  top: 35px;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  min-width: 180px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: white;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: #00b4d8;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* HERO */
 .hero {
   background: url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1500&q=80')
               center/cover no-repeat;
@@ -100,7 +144,7 @@ body {
   background: #0077b6;
 }
 
-/* General Section Styling */
+/* SECTIONS */
 section {
   padding: 6rem 2rem;
   margin-top: 60px;
@@ -112,7 +156,6 @@ section {
   text-align: center;
 }
 
-/* Page Header */
 .page-header {
   background: #0a1931;
   color: white;
@@ -120,11 +163,7 @@ section {
   text-align: center;
 }
 
-.page-header h1 {
-  font-size: 2.5rem;
-}
-
-/* Services */
+/* SERVICES */
 .services {
   background: #f1f1f1;
 }
@@ -149,7 +188,7 @@ section {
   transform: translateY(-5px);
 }
 
-/* Contact */
+/* CONTACT */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -164,7 +203,7 @@ section {
   font-size: 1rem;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   background: #0a1931;
   color: white;
@@ -173,7 +212,7 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -182,7 +221,7 @@ footer {
     position: absolute;
     top: 70px;
     right: 0;
-    width: 200px;
+    width: 220px;
     border-radius: 5px;
   }
 
@@ -195,6 +234,21 @@ footer {
     font-size: 2rem;
     color: white;
     cursor: pointer;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: #0a1931;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: flex;
+    flex-direction: column;
   }
 
   .service-grid {
