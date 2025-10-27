@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Corporate Website | Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">
-      <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo"></a>
+      <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo" /></a>
     </div>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="about.html">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="history.html">Company History</a></li>
+        </ul>
+      </li>
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="menu-toggle" id="mobile-menu">&#9776;</div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h1>Professional. Reliable. Trusted.</h1>
@@ -29,6 +36,7 @@
     </div>
   </section>
 
+  <!-- INTRO -->
   <section class="about">
     <div class="container">
       <h2>Welcome to Our Corporate Website</h2>
@@ -36,6 +44,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Corporate Website. All Rights Reserved.</p>
   </footer>
